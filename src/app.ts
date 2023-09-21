@@ -1,11 +1,7 @@
-import express from 'express';
 import { dataCsv } from './utils/csv-data';
 
 export class ImportCsv {
-    public app: express.Application;
-
     constructor() {
-        this.app = express();
         this.process();
     }
 
@@ -20,10 +16,6 @@ export class ImportCsv {
         }
         console.log('Processo finalizado com sucesso!!');
     }
-}
-
-async function sleep (msec: any) {
-    return new Promise(resolve => setTimeout(resolve, msec));
 }
 
 const execute = new ImportCsv();
