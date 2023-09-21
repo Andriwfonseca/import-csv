@@ -1,15 +1,10 @@
 import { dataCsv } from './utils/csv-data';
-
-export class ImportCsv {
+class ImportCsv {
     constructor() {
-        this.process();
+        this.loadData();
     }
 
-    private async process () {
-        await this.loadData();
-    }
-
-    public async loadData () {
+    public loadData () {
         console.log('Iniciando carregamento do csv');
         for (const item of dataCsv) { 
             console.log(item, 'item')
